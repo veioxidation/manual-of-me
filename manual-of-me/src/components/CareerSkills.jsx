@@ -69,7 +69,7 @@ export default function CareerSkills() {
   };
 
   return (
-    <div id="career-skills" className="py-20 bg-gray-50">
+    <div id="career-skills" className="py-20 bg-white/40 backdrop-blur-sm">
       <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12">
         {/* Left Side: Career Timeline */}
         <div>

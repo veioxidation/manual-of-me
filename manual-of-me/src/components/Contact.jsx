@@ -1,6 +1,6 @@
 export default function Contact() {
     return (
-      <div id="contact" className="py-20 bg-gradient-to-br from-blue-100 to-indigo-200 flex items-center justify-center">
+      <div id="contact" className="py-20 bg-white/40 backdrop-blur-sm flex items-center justify-center">
         <div className="backdrop-blur-lg bg-white/30 shadow-lg rounded-2xl p-10 max-w-xl text-center">
           <h2 className="text-3xl font-bold text-gray-900">Want to reach me out?</h2>
           <p className="text-gray-700 mt-4">

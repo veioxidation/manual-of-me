@@ -20,7 +20,7 @@ export default function Principles() {
   }, []);
 
   return (
-    <div id="principles" className="py-20 bg-gray-50">
+    <div id="principles" className="py-20 bg-white/40 backdrop-blur-sm">
       <div className="max-w-5xl mx-auto px-6 text-center">
         <h2
           className={`text-3xl font-bold text-gray-900 mb-12 transition-all duration-700 ease-out

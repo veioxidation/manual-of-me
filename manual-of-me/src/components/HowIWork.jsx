@@ -20,7 +20,7 @@ export default function HowIWork() {
   }, []);
 
   return (
-    <div id="howIWork" className="py-20 bg-gray-100">
+    <div id="howIWork" className="py-20 bg-white/80 backdrop-blur-sm">
       <div className="max-w-5xl mx-auto px-6 text-center">
         <h2
           className={`text-3xl font-bold text-gray-900 mb-12 transition-all duration-700 ease-out
@@ -49,7 +49,7 @@ export default function HowIWork() {
               hover:shadow-xl hover:scale-105`}
           >
             <FaBolt size={50} className="text-primary mb-4 transition-transform duration-300 hover:scale-125" />
-            <h3 className="text-xl font-semibold text-gray-900">Agile Practitioner</h3>
+            <h3 className="text-xl font-semibold text-gray-900">Agile mindset</h3>
             <p className="text-gray-700 italic mt-2 max-w-xs text-xs">Focus on increment & stakeholder collaboration. Fostering empiricism - transparency, inspection and adaptation.</p>
           </div>
 

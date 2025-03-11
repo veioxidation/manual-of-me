@@ -26,7 +26,7 @@ export default function Interests() {
     }, []);
   
     return (
-      <div id="interests" className="py-20 bg-gradient-to-br from-indigo-50 to-blue-100">
+      <div id="interests" className="py-20 bg-white/80 backdrop-blur-sm">
         <div className="max-w-5xl mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Interests & Hobbies</h2>
           <p className="text-gray-600 mb-12">What I enjoy beyond work.</p>
@@ -46,11 +46,11 @@ export default function Interests() {
                   style={{ backgroundImage: `url(${item.image})` }}
                 >
                   {/* Lightened Overlay + Blur - Removed on Hover */}
-                  <div className="absolute inset-0 bg-white/30 backdrop-blur-md transition-all duration-500 group-hover:bg-transparent group-hover:backdrop-blur-none"></div>
+                  <div className="absolute inset-0 bg-primary/50  backdrop-blur-md transition-all duration-500 group-hover:bg-transparent group-hover:backdrop-blur-none"></div>
                 </div>
   
                 {/* Content - Text Fades on Hover */}
-                <div className="relative z-10 text-gray-900 text-center p-6 transition-opacity duration-500 group-hover:opacity-0">
+                <div className="relative z-10 text-white text-center p-6 transition-opacity duration-500 group-hover:opacity-0">
                   <h3 className="text-xl font-semibold">{item.title}</h3>
                   <p className="text-sm mt-2">{item.description}</p>
                 </div>
