@@ -26,7 +26,7 @@ export default function Interests() {
     }, []);
   
     return (
-      <div id="interests" className="py-20 bg-gradient-to-br from-indigo-50 to-blue-100">
+      <div id="interests" className="py-20 bg-white/80 backdrop-blur-sm">
         <div className="max-w-5xl mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Interests & Hobbies</h2>
           <p className="text-gray-600 mb-12">What I enjoy beyond work.</p>

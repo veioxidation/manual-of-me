@@ -30,9 +30,9 @@ export default function ManualOfMe() {
   }, []);
 
   return (
-    <div id="manual" className="py-20 bg-gray-100 relative">
+    <div id="manual" className="py-20 bg-white/70 backdrop-blur-sm">
       {/* Grainy Background Effect */}
-      <div className="absolute inset-0 bg-gray-100 bg-noise-pattern opacity-50"></div>
+      <div className="absolute inset-0 bg-white-100 bg-noise-pattern opacity-50"></div>
 
       <div className="max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-start relative">
         {/* Left Side: Introduction Text */}

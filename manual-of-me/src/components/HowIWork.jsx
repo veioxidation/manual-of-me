@@ -20,7 +20,7 @@ export default function HowIWork() {
   }, []);
 
   return (
-    <div id="howIWork" className="py-20 bg-gray-100">
+    <div id="howIWork" className="py-20 bg-white/80 backdrop-blur-sm">
       <div className="max-w-5xl mx-auto px-6 text-center">
         <h2
           className={`text-3xl font-bold text-gray-900 mb-12 transition-all duration-700 ease-out

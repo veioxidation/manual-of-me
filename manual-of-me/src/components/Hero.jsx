@@ -24,9 +24,9 @@ export default function Hero() {
           href="https://www.manualof.me"
           target="_blank"
           rel="noopener noreferrer"
-          className="fixed top-4 right-4 flex items-center gap-2 text-white hover:text-secondary transition-colors duration-300 [text-shadow:_0_0_20px_rgba(255,255,255,0.8)] z-50"
+          className="fixed top-4 right-4 flex items-center gap-2 text-secondary hover:text-white transition-colors duration-300 [text-shadow:_0_0_20px_rgba(255,255,255,0.8)] z-50"
         >
-          <span className="text-sm">What is Manual of Me?</span>
+          <span className="text-sm text-primary hover:text-white duration-300">What is Manual of Me?</span>
           <FaQuestionCircle className="w-5 h-5" />
         </a>
 
@@ -35,16 +35,16 @@ export default function Hero() {
           <div className="absolute inset-0 rounded-full border-4 border-secondary"></div>
           <div className="absolute inset-1 rounded-full bg-white"></div>
           <img
-            src="/images/DSCF3441-Edit-Edit-2.jpg" // Replace with your actual image path
+            src="/images/profile_picture_mom.jpg" // Replace with your actual image path
             alt="Profile"
             className="relative z-10 rounded-full w-full h-full object-cover shadow-lg"
           />
         </div>
 
         {/* Right Side: Text Content */}
-        <div className="text-left text-blue-900 text-white max-w-xl [text-shadow:_0_0_20px_rgba(255,255,255,0.8),_0_0_30px_rgba(255,255,255,0.6)]">
-          <h1 className="text-4xl text-blue-900 font-bold [text-shadow:_0_0_25px_rgba(255,255,255,0.9),_0_0_40px_rgba(255,255,255,0.7)]">Hi, I'm Przemek</h1>
-          <p className="text-lg mt-3 text-blue-900 [text-shadow:_0_0_20px_rgba(255,255,255,0.8),_0_0_30px_rgba(255,255,255,0.6)]">
+        <div className="text-left text-primary text-white max-w-xl [text-shadow:_0_0_20px_rgba(255,255,255,0.8),_0_0_30px_rgba(255,255,255,0.6)]">
+          <h1 className="text-4xl text-primary font-bold [text-shadow:_0_0_25px_rgba(255,255,255,0.9),_0_0_40px_rgba(255,255,255,0.7)]">Hi, I'm Przemek</h1>
+          <p className="text-lg mt-3 text-primary [text-shadow:_0_0_20px_rgba(255,255,255,0.8),_0_0_30px_rgba(255,255,255,0.6)]">
             AI Engineer in GOTO XDO Automation & AI 
           </p>
           <div className="mt-6">
