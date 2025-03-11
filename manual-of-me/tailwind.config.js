@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#278C82", // Soft Teal
+        primary: "#393d6a", // Soft Teal
         secondary: "#6DA0A6", // Warm Beige
         accent: "#6DA0A6", // Light Pastel Orange
         // dark: "#6A4E34", // Earthy Brown

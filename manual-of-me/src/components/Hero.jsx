@@ -24,7 +24,7 @@ export default function Hero() {
           href="https://www.manualof.me"
           target="_blank"
           rel="noopener noreferrer"
-          className="fixed top-4 right-4 flex items-center gap-2 text-secondary hover:text-white transition-colors duration-300 [text-shadow:_0_0_20px_rgba(255,255,255,0.8)] z-50"
+          className="fixed top-4 right-4 flex items-center gap-2 text-primary hover:text-white transition-colors duration-300 [text-shadow:_0_0_20px_rgba(255,255,255,0.8)] z-50"
         >
           <span className="text-sm text-primary hover:text-white duration-300">What is Manual of Me?</span>
           <FaQuestionCircle className="w-5 h-5" />
