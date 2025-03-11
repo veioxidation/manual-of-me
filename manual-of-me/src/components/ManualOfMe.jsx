@@ -1,18 +1,10 @@
 import { useEffect, useState } from "react";
-import { FaHeadphones, FaHandHoldingHeart, FaBolt, FaBrain, FaChartLine, FaSearch, FaBalanceScale } from "react-icons/fa";
-
-const items = [
-  { icon: <FaHeadphones size={40} />, title: "Deep Work Advocate", description: "I thrive in focused, distraction-free environments." },
-  { icon: <FaHandHoldingHeart size={40} />, title: "Honesty & Directness", description: "I believe honesty is the highest form of care." },
-  { icon: <FaBolt size={40} />, title: "Agile & MVP First", description: "Build fast, iterate fast, learn fast." },
-  { icon: <FaBrain size={40} />, title: "Kaizen Mindset", description: "Leave things better than you found them." },
-  { icon: <FaChartLine size={40} />, title: "Data-Driven Thinking", description: "Bring me solid data to convince me." },
-  { icon: <FaSearch size={40} />, title: "Why Over What", description: "I always dig deeper to understand the real issue." },
-  { icon: <FaBalanceScale size={40} />, title: "Zen & Stoicism", description: "I apply mindfulness and philosophy to work and life." }
-];
+import { FaHome, FaClock, FaGlobe, FaBriefcase } from "react-icons/fa";
 
 export default function ManualOfMe() {
   const [isVisible, setIsVisible] = useState(false);
+  const [headerVisible, setHeaderVisible] = useState(false);
+  const [showDisclaimer, setShowDisclaimer] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,30 +15,92 @@ export default function ManualOfMe() {
           setIsVisible(true);
         }
       }
+
+      const header = document.getElementById("manual-header");
+      if (header) {
+        const top = header.getBoundingClientRect().top;
+        if (top < window.innerHeight * 0.8) {
+          setHeaderVisible(true);
+        }
+      }
     };
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <div id="manual" className="py-20 bg-white">
-      <div className="max-w-5xl mx-auto px-6 text-center">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6">Manual of Me</h2>
-        <p className="text-gray-600 mb-12">A guide to how I work, think, and collaborate.</p>
+    <div id="manual" className="py-20 bg-gray-100 relative">
+      {/* Grainy Background Effect */}
+      <div className="absolute inset-0 bg-gray-100 bg-noise-pattern opacity-50"></div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {items.map((item, index) => (
-            <div
-              key={index}
-              className={`p-6 rounded-xl backdrop-blur-lg bg-white/40 shadow-md transform transition-all duration-500 ease-out
-                ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-90"}
-                hover:shadow-xl hover:scale-105`}
-            >
-              <div className="text-primary mb-4">{item.icon}</div>
-              <h3 className="text-xl font-semibold">{item.title}</h3>
-              <p className="text-gray-700 mt-2">{item.description}</p>
-            </div>
-          ))}
+      <div className="max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-start relative">
+        {/* Left Side: Introduction Text */}
+        <div className="md:w-1/2 pr-6">
+          <h2
+            id="manual-header"
+            className={`text-3xl font-bold text-gray-900 mb-4 transition-all duration-700 ease-out
+            ${headerVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+          >
+            Hey there!
+          </h2>
+          <p
+            className={`text-gray-700 transition-all duration-700 ease-out delay-150 leading-relaxed
+            ${headerVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+          >
+            I’m Przemek, an AI Engineer, with a background in data science and engineering.
+            I'm passionate about solving problems; making complex things simpler, and simple things - automated.<br /><br />
+            I value <b>deep work</b>, <b>open and honest collaboration</b>, and <b>agile execution</b>. <br/><br/>When I'm not working, you can most likely find me doing sports, traveling, and learning languages.
+          </p>
+        </div>
+
+        {/* Right Side: 2x2 Grid of Interactive Tiles */}
+        <div className="md:w-1/2 grid grid-cols-2 gap-4 mt-8 md:mt-0">
+          {/* Location */}
+          <div className="p-6 rounded-xl backdrop-blur-lg bg-white/40 shadow-md transform transition-all duration-500 ease-out
+              hover:shadow-xl hover:scale-105 flex flex-col items-center text-center">
+            <FaHome size={30} className="text-primary mb-2" />
+            <h3 className="text-xl font-semibold">Location</h3>
+            <p className="text-gray-700">Zurich, Switzerland</p>
+          </div>
+
+
+          {/* Languages Spoken */}
+          <div className="p-6 rounded-xl backdrop-blur-lg bg-white/40 shadow-md transform transition-all duration-500 ease-out
+              hover:shadow-xl hover:scale-105 flex flex-col items-center text-center">
+            <FaGlobe size={30} className="text-primary mb-2" />
+            <h3 className="text-xl font-semibold">Languages</h3>
+            <p className="text-gray-700 text-sm">English, Polish - fluently</p>
+            <p className="text-gray-700 text-xs">(+ German, Spanish)</p>
+
+          </div>
+
+                    {/* Working Hours with Hover Disclaimer */}
+                    <div 
+            className="p-6 rounded-xl backdrop-blur-lg bg-white/40 shadow-md transform transition-all duration-500 ease-out
+              hover:shadow-xl hover:scale-105 flex flex-col items-center text-center relative"
+            onMouseEnter={() => setShowDisclaimer(true)}
+            onMouseLeave={() => setShowDisclaimer(false)}
+          >
+            <FaClock size={30} className="text-primary mb-2" />
+            <h3 className="text-xl font-semibold">Working Hours</h3>
+            <p className="text-gray-700">08:30 - 17:30</p>
+            
+            {showDisclaimer && (
+              <div className="absolute top-full mt-2 w-48 bg-gray-900 text-white text-sm p-2 rounded-lg shadow-lg">
+                Meetings outside these hours are usually fine with **proper advance notice**.
+              </div>
+            )}
+          </div>
+
+
+          {/* Working Experience */}
+          <div className="p-6 rounded-xl backdrop-blur-lg bg-white/40 shadow-md transform transition-all duration-500 ease-out
+              hover:shadow-xl hover:scale-105 flex flex-col items-center text-center">
+            <FaBriefcase size={30} className="text-primary mb-2" />
+            <h3 className="text-xl font-semibold">Experience</h3>
+            <p className="text-gray-700">7 years at UBS</p>
+          </div>
         </div>
       </div>
     </div>

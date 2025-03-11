@@ -1,5 +1,7 @@
 import Hero from "./components/Hero";
 import ManualOfMe from "./components/ManualOfMe";
+import Principles from "./components/Principles";
+
 import HowIWork from "./components/HowIWork";
 import MyTeam from "./components/MyTeam";
 import Interests from "./components/Interests";
@@ -13,8 +15,9 @@ export default function App() {
 
       {/* Sections */}
       <ManualOfMe />
+      <Principles />
       <HowIWork />
-      <MyTeam />
+      {/* <MyTeam /> */}
       <Interests />
       <Contact />
     </div>

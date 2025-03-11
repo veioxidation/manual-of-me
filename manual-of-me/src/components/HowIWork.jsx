@@ -1,14 +1,5 @@
 import { useEffect, useState } from "react";
-import { FaChartBar, FaUserTie, FaRocket, FaSearch, FaCogs, FaSyncAlt } from "react-icons/fa";
-
-const workPrinciples = [
-  { icon: <FaRocket size={40} />, title: "Ambitious Goals & People", description: "I work best with those who challenge the norm and push limits." },
-  { icon: <FaChartBar size={40} />, title: "Bring Data to Convince Me", description: "I value decisions backed by strong reasoning, not just opinions." },
-  { icon: <FaSearch size={40} />, title: "Why Over What", description: "I always dig deeper to understand the real issue." },
-  { icon: <FaCogs size={40} />, title: "Agile Execution", description: "MVP first, iterate fast, involve customers early." },
-  { icon: <FaSyncAlt size={40} />, title: "Continuous Improvement (Kaizen)", description: "I believe in refining and improving everything I touch." },
-  { icon: <FaUserTie size={40} />, title: "Structured Over Casual", description: "Well-thought-out messages and clarity in discussions matter." }
-];
+import { FaHeadphones, FaBolt, FaSyncAlt, FaCommentDots } from "react-icons/fa";
 
 export default function HowIWork() {
   const [isVisible, setIsVisible] = useState(false);
@@ -23,29 +14,66 @@ export default function HowIWork() {
         }
       }
     };
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <div id="howIWork" className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100">
+    <div id="howIWork" className="py-20 bg-gray-100">
       <div className="max-w-5xl mx-auto px-6 text-center">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6">How I Work Best</h2>
-        <p className="text-gray-600 mb-12">The key principles that define my work style.</p>
+        <h2
+          className={`text-3xl font-bold text-gray-900 mb-12 transition-all duration-700 ease-out
+          ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+        >
+          How I Work Best
+        </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {workPrinciples.map((item, index) => (
-            <div
-              key={index}
-              className={`p-6 rounded-xl backdrop-blur-lg bg-white/40 shadow-md transform transition-all duration-500 ease-out
-                ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-90"}
-                hover:shadow-xl hover:scale-105`}
-            >
-              <div className="text-primary mb-4">{item.icon}</div>
-              <h3 className="text-xl font-semibold">{item.title}</h3>
-              <p className="text-gray-700 mt-2">{item.description}</p>
-            </div>
-          ))}
+        {/* Grid Layout: 4 Items in One Row */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+          {/* Deep Work Believer */}
+          <div
+            className={`flex flex-col items-center justify-start text-center p-8 h-64 rounded-xl backdrop-blur-lg bg-white/40 shadow-md transition-all duration-500 ease-out
+              ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-90"}
+              hover:shadow-xl hover:scale-105`}
+          >
+            <FaHeadphones size={50} className="text-primary mb-4 transition-transform duration-300 hover:scale-125" />
+            <h3 className="text-xl font-semibold text-gray-900">Deep Work</h3>
+            <p className="text-gray-700 italic mt-2 max-w-xs text-xs">Quality work requires <b>focus</b>. We build great things within uninterrupted time slots - so don't expect me to always be available and respond immediately</p>
+          </div>
+
+          {/* Agile Practitioner */}
+          <div
+            className={`flex flex-col items-center justify-start text-center p-8 h-64 rounded-xl backdrop-blur-lg bg-white/40 shadow-md transition-all duration-500 ease-out delay-150
+              ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-90"}
+              hover:shadow-xl hover:scale-105`}
+          >
+            <FaBolt size={50} className="text-primary mb-4 transition-transform duration-300 hover:scale-125" />
+            <h3 className="text-xl font-semibold text-gray-900">Agile Practitioner</h3>
+            <p className="text-gray-700 italic mt-2 max-w-xs text-xs">Focus on increment & stakeholder collaboration. Fostering empiricism - transparency, inspection and adaptation.</p>
+          </div>
+
+          {/* Kaizen Mindset */}
+          <div
+            className={`flex flex-col items-center justify-start text-center p-8 h-64 rounded-xl backdrop-blur-lg bg-white/40 shadow-md transition-all duration-500 ease-out delay-300
+              ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-90"}
+              hover:shadow-xl hover:scale-105`}
+          >
+            <FaSyncAlt size={50} className="text-primary mb-4 transition-transform duration-300 hover:scale-125" />
+            <h3 className="text-xl font-semibold text-gray-900">Kaizen</h3>
+            <p className="text-gray-700 italic mt-2 max-w-xs text-xs">改善 - Leaving things in a better state than you encountered them.</p>
+          </div>
+
+          {/* Simple Communication */}
+          <div
+            className={`flex flex-col items-center justify-start text-center p-8 h-64 rounded-xl backdrop-blur-lg bg-white/40 shadow-md transition-all duration-500 ease-out delay-450
+              ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-90"}
+              hover:shadow-xl hover:scale-105`}
+          >
+            <FaCommentDots size={50} className="text-primary mb-4 transition-transform duration-300 hover:scale-125" />
+            <h3 className="text-xl font-semibold text-gray-900">Clarity matters</h3>
+            <p className="text-gray-700 italic mt-2 max-w-xs text-xs">We all have a tendency to underestimate how differently we look at the things. Precise communication helps us bring these barriers down.</p>
+          </div>
         </div>
       </div>
     </div>

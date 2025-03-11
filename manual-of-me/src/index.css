@@ -5,3 +5,12 @@
 body {
   @apply bg-background text-gray-900;
 }
+
+
+/* Custom Grainy Background */
+.bg-noise-pattern {
+  background-image: url("/images/grey_noise.jpg"); /* Replace with actual texture */
+  background-size: 1000px 1000px;
+  opacity: 0.05; /* Adjust transparency */
+  mix-blend-mode: multiply;
+}
