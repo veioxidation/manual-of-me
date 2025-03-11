@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 
 // Example images (replace these with your own file paths later)
 const interestData = [
-  { title: "Travel & Adventure", description: "Exploring off-the-beaten paths.", image: "/images/DSCF3502.jpg" },
-  { title: "Sports & Fitness", description: "Running, cycling, hiking, and much more.", image: "/images/DSCF5473.jpg" },
-  { title: "Meditation & Zen", description: "Vipassana, mindfulness practice and finding your peace.", image: "/images/DSCF6170.jpg" },
+  { title: "Travel", description: "Exploring off-the-beaten paths.", image: "/images/DSCF3502.jpg" },
+  { title: "Sports", description: "Hiking, cycling, diving, and much more.", image: "/images/DSCF5473.jpg" },
+  { title: "Meditation", description: "Everyday mindfulness", image: "/images/DSCF6170.jpg" },
   { title: "Learning", description: "Understanding concepts, ideas, trying new things.", image: "/images/DSCF4402.jpg" }
 ];
 export default function Interests() {

@@ -4,6 +4,7 @@ import Principles from "./components/Principles";
 
 import HowIWork from "./components/HowIWork";
 import MyTeam from "./components/MyTeam";
+import CareerSkills from "./components/CareerSkills";
 import Interests from "./components/Interests";
 import Contact from "./components/Contact";
 
@@ -17,6 +18,7 @@ export default function App() {
       <ManualOfMe />
       <Principles />
       <HowIWork />
+      <CareerSkills />
       {/* <MyTeam /> */}
       <Interests />
       <Contact />

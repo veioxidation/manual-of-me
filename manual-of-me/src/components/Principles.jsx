@@ -38,7 +38,7 @@ export default function Principles() {
           >
             <FaSearch size={40} className="text-primary mb-4" />
             <h3 className="text-xl font-semibold text-gray-900">Why Over What</h3>
-            <p className="text-gray-700 mt-2 max-w-xs">Understanding core needs is key.</p>
+            <p className="text-gray-700 mt-2 max-w-xs">Understanding the purpose is key.</p>
           </div>
 
           {/* Principle 2: Practicality Over Perfectionism */}
@@ -57,9 +57,9 @@ export default function Principles() {
               ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
           >
             <FaHeart size={40} className="text-primary mb-4" />
-            <h3 className="text-xl font-semibold text-gray-900">Honesty = Care</h3>
+            <h3 className="text-xl font-semibold text-gray-900">Absolute openness</h3>
             <p className="text-gray-700 mt-2 max-w-xs">
-              Properly communicated directness is an act of kindness.
+              Honesty is an ultimate sign of care.
             </p>
           </div>
         </div>

@@ -1,3 +1,5 @@
+import { FaQuestionCircle } from "react-icons/fa";
+
 export default function Hero() {
 
   const handleScroll = () => {
@@ -17,6 +19,17 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative flex items-center max-w-5xl w-full">
+        {/* Reference Link */}
+        <a
+          href="https://www.manualof.me"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="fixed top-4 right-4 flex items-center gap-2 text-white hover:text-secondary transition-colors duration-300 [text-shadow:_0_0_20px_rgba(255,255,255,0.8)] z-50"
+        >
+          <span className="text-sm">What is Manual of Me?</span>
+          <FaQuestionCircle className="w-5 h-5" />
+        </a>
+
         {/* Left Side: Profile Picture */}
         <div className="relative w-40 h-40 md:w-52 md:h-52 mr-10">
           <div className="absolute inset-0 rounded-full border-4 border-secondary"></div>
