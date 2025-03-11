@@ -72,7 +72,7 @@ export default function HowIWork() {
           >
             <FaCommentDots size={50} className="text-primary mb-4 transition-transform duration-300 hover:scale-125" />
             <h3 className="text-xl font-semibold text-gray-900">Clarity matters</h3>
-            <p className="text-gray-700 italic mt-2 max-w-xs text-xs">We all have a tendency to underestimate how differently we look at the things. Precise communication helps us bring these barriers down.</p>
+            <p className="text-gray-700 italic mt-2 max-w-xs text-xs">We all underestimate how differently we look at things. Precise communication helps us bring barriers down.</p>
           </div>
         </div>
       </div>
