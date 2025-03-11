@@ -49,7 +49,7 @@ export default function HowIWork() {
               hover:shadow-xl hover:scale-105`}
           >
             <FaBolt size={50} className="text-primary mb-4 transition-transform duration-300 hover:scale-125" />
-            <h3 className="text-xl font-semibold text-gray-900">Agile Practitioner</h3>
+            <h3 className="text-xl font-semibold text-gray-900">Agile mindset</h3>
             <p className="text-gray-700 italic mt-2 max-w-xs text-xs">Focus on increment & stakeholder collaboration. Fostering empiricism - transparency, inspection and adaptation.</p>
           </div>
 

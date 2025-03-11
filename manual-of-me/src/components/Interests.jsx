@@ -46,11 +46,11 @@ export default function Interests() {
                   style={{ backgroundImage: `url(${item.image})` }}
                 >
                   {/* Lightened Overlay + Blur - Removed on Hover */}
-                  <div className="absolute inset-0 bg-white/30 backdrop-blur-md transition-all duration-500 group-hover:bg-transparent group-hover:backdrop-blur-none"></div>
+                  <div className="absolute inset-0 bg-primary/50  backdrop-blur-md transition-all duration-500 group-hover:bg-transparent group-hover:backdrop-blur-none"></div>
                 </div>
   
                 {/* Content - Text Fades on Hover */}
-                <div className="relative z-10 text-gray-900 text-center p-6 transition-opacity duration-500 group-hover:opacity-0">
+                <div className="relative z-10 text-white text-center p-6 transition-opacity duration-500 group-hover:opacity-0">
                   <h3 className="text-xl font-semibold">{item.title}</h3>
                   <p className="text-sm mt-2">{item.description}</p>
                 </div>
