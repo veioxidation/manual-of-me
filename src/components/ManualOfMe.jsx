@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
-import { FaHome, FaClock, FaGlobe, FaBriefcase } from "react-icons/fa";
+import { FaVolumeUp, FaHome, FaClock, FaGlobe, FaBriefcase } from "react-icons/fa";
 
 export default function ManualOfMe() {
   const [isVisible, setIsVisible] = useState(false);
   const [headerVisible, setHeaderVisible] = useState(false);
   const [showDisclaimer, setShowDisclaimer] = useState(false);
+  const [audio] = useState(typeof Audio !== "undefined" ? new Audio("audio/pronunciation_pl_przemek.mp3") : null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,6 +30,13 @@ export default function ManualOfMe() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handlePlayAudio = () => {
+    if (audio) {
+      audio.play();
+    }
+  };
+
+
   return (
     <div id="manual" className="py-20 bg-white/70 backdrop-blur-sm">
       {/* Grainy Background Effect */}
@@ -50,8 +58,16 @@ export default function ManualOfMe() {
           >
             I'm Przemek, an AI Engineer, with a background in data science and engineering.
             I'm passionate about solving problems; making complex things simpler, and simple things - automated.<br /><br />
-            I value <b>deep work</b>, <b>open and honest collaboration</b>, and <b>agile execution</b>. <br/><br/>When I'm not working, you can most likely find me doing sports, traveling, and learning languages.
+            I value <b>deep work</b>, <b>open and honest collaboration</b>, and <b>agile execution</b>. <br/><br/>When I'm not working, you can most likely find me doing sports, traveling, or trying new things.
           </p>
+          {/* Pronunciation Feature */}
+          <p className={`text-lg font-bold text-primary mt-6 flex items-center gap-2 cursor-pointer hover:text-secondary transition duration-300
+          ${headerVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+            onClick={handlePlayAudio}>
+            Not Polish? You're probably wondering how to pronounce my name!
+            <FaVolumeUp size={22} />
+          </p>          
+
         </div>
 
         {/* Right Side: 2x2 Grid of Interactive Tiles */}
@@ -62,7 +78,7 @@ export default function ManualOfMe() {
               ${headerVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
             <FaHome size={30} className="text-primary mb-2" />
             <h3 className="text-xl font-semibold">Location</h3>
-            <p className="text-gray-700">Zurich, Switzerland</p>
+            <p className="text-gray-700">Zürich, Switzerland</p>
           </div>
 
           {/* Languages Spoken */}
@@ -101,7 +117,7 @@ export default function ManualOfMe() {
                ${headerVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
             <FaBriefcase size={30} className="text-primary mb-2" />
             <h3 className="text-xl font-semibold">Experience</h3>
-            <p className="text-gray-700">7 years at UBS</p>
+            <p className="text-gray-700">7+ years at UBS</p>
           </div>
         </div>
       </div>

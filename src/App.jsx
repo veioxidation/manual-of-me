@@ -5,8 +5,9 @@ import Principles from "./components/Principles";
 import HowIWork from "./components/HowIWork";
 import MyTeam from "./components/MyTeam";
 import CareerSkills from "./components/CareerSkills";
-import Interests from "./components/Interests";
+import BondOver from "./components/Interests";
 import Contact from "./components/Contact";
+import QASection from "./components/QASection";
 
 export default function App() {
   return (
@@ -20,7 +21,9 @@ export default function App() {
       <HowIWork />
       <CareerSkills />
       {/* <MyTeam /> */}
-      <Interests />
+      <BondOver />
+      <QASection />
+
       <Contact />
     </div>
   );
