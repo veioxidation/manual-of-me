@@ -38,7 +38,7 @@ export default function ManualOfMe() {
 
 
   return (
-    <div id="manual" className="py-20 bg-white/70 backdrop-blur-sm">
+    <div id="manual" className="py-20 bg-white/80 backdrop-blur-sm">
       {/* Grainy Background Effect */}
       <div className="absolute inset-0 bg-white-100 bg-noise-pattern opacity-50"></div>
 
